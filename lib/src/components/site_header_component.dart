@@ -14,6 +14,6 @@ class SiteHeaderComponent {
   SiteHeaderComponent(this._router);
   
   navigateHome() {
-    _router.navigate("/");
+    _router.navigate('/');
   }
 }

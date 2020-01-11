@@ -62,8 +62,7 @@ class InjectParser {
   }
 
   void _error(String message) {
-    var errorMessage =
-        'error parsing DartPad scripts on line $_currentLine: $message';
+    var errorMessage = 'error parsing DartPad scripts on line $_currentLine: $message';
     throw DartPadInjectException(errorMessage);
   }
 }

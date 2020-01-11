@@ -7,8 +7,11 @@
 /// }
 ///
 /// NB: Lists are ordered!
+///
+// ignore_for_file: prefer_single_quotes
 const Map<String, Map<String, List<String>>> TABLE_OF_CONTENTS = {
   "Dart": {
+    // ignore:
     "Getting Started with Dart": [
       "About Dart",
       "Install Dart on your machine",

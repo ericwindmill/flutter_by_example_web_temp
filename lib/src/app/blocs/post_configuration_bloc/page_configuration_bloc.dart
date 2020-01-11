@@ -5,16 +5,13 @@ import 'package:flutter_by_example/src/app/blocs/post_configuration_bloc/page_co
 import 'package:flutter_by_example/src/app/models/models.dart';
 import 'package:flutter_by_example/src/app/repositories/posts_repository_base.dart';
 
-
-class PageConfigurationBloc
-    extends Bloc<PageConfigurationBlocEvent, PageConfigurationBlocState> {
+class PageConfigurationBloc extends Bloc<PageConfigurationBlocEvent, PageConfigurationBlocState> {
   final PostRepository repository;
 
   PageConfigurationBloc({this.repository});
 
   @override
-  PageConfigurationBlocState get initialState =>
-      InitialPageConfigurationBlocState(
+  PageConfigurationBlocState get initialState => InitialPageConfigurationBlocState(
         PostConfiguration(
             id: 'post_one',
             frontmatter: PostFrontmatter(title: 'PostOne', author: 'Eric'),
@@ -27,7 +24,7 @@ class PageConfigurationBloc
   ) async* {
     if (event is LoadSinglePage) {
       var postConfig = await repository.loadMarkdownPostByPageId(event.postId);
-      yield new PageConfigurationBlocStateLoaded(postConfig);
+      yield PageConfigurationBlocStateLoaded(postConfig);
     }
   }
 }
