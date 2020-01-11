@@ -1,1 +1,1 @@
-web: ./dart-sdk/bin/pub run build_runner build -r -o web:build
+web: ./dart-sdk/bin/dart bin/main.dart
